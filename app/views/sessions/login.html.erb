@@ -1,0 +1,15 @@
+<div>
+	<%= form_for :user, url: '/sessions', method: :post do |f| %>
+
+	  <label for="phone_number">Phone</label>
+	  <%= f.text_field :phone_number %>
+	  <%= f.submit "Submit", class: "", id: 'loginButton' %>
+	<% end %>
+
+</div>
+
+<div class="row col-xs-10 col-xs-offset-1 text-center">
+	<button data-id="<%= @user.id %>" id="finder-btn" class="">Locate Me</button>
+</div>
+
+<div id="out" class="col-xs-10 col-xs-offset-1 row text-center"></div>
