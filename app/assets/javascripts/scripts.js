@@ -1,10 +1,11 @@
 
 
-
-
-
-
 $(function() {
+
+
+  ////////////START MAP//////////////
+ 
+  ////////////END MAP////////////////
 
     $('#finder-btn').on('click', function (){ 
     navigator.geolocation.getCurrentPosition(success, error);

@@ -4,22 +4,22 @@
   <title>SimplifyLocal</title>
   
 
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
 
 
 	<%= csrf_meta_tags %>
 
-
+<script id="sdk-js" src="https://cdn.digits.com/1/sdk.js" async></script>
 	
-  <script id="sdk-js" src="https://cdn.digits.com/1/sdk.js" async></script>
+ 
 
 </head>
 <body>
-<button data-id="<%= @user.id %>" id="finder-btn">Geo-Coordnate My Position</button>
+
 
 
 <%= yield %>
-
+	 
   <%= javascript_include_tag :application %>
 </body>
 </html>
