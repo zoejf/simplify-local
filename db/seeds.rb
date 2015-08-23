@@ -14,7 +14,8 @@ a = Business.create([
     lng: "-122.4048963",
     phone: "415-777-4400",
     website: "http://www.colehardware.com/",
-    description: "Cole Hardware company was founded in Cole Valley, San Francisc, in the 1920s."
+    description: "Cole Hardware company was founded in Cole Valley, San Francisco, in the 1920s.",
+    merch_assoc: "SOMBA: South of Market Business Association"
   },
   {
     name: "The Iron Cactus",
@@ -43,4 +44,21 @@ a = Business.create([
     website: "http://www.sweetinspirationbakery.com/",
     description: "Mom-and-pop bakery in the heart of the San Francisco's Castro neighborhood."
   }
+]);
+
+allProducts = Product.create([
+  {
+    name: "Pasta Spoon",
+    price: 4.99,
+    description: "Oneida stainless steel pasta spoon.",
+    image: "http://www.contentfaq.com/wp-content/uploads/2015/08/pasta-spoon.png",
+    business_id: 1,
+  },
+  {
+    name: "Tea Infuser",
+    price: 8.99,
+    description: "Whimsical tea infusers make a perfect gift.",
+    image: "http://www.contentfaq.com/wp-content/uploads/2015/08/novelty-tea.png",
+    business_id: 1,
+  },
 ]);
