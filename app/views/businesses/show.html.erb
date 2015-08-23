@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h1><%= @business.name %>&nbsp;&nbsp;<small><%= @business.phone %></small></h1>
+        <h1><%= @business.name %><br><small><%= @business.phone %></small></h1>
         <h4><%= @business.address %></h4>
         <hr>
         <p><%= @business.description %></p><br>
@@ -37,7 +37,7 @@
                     <i class="fa fa-cc-mastercard fa-6" style='color:white'></i>
             </button>
           <br>
-          <small>$<%= p.price %></small></h3>
+          <small>$<%= p.show_price %></small></h3>
           <p><img src="<%= p.image %>" class="product-image"></p>
           <p><%= p.description %></p>
 
