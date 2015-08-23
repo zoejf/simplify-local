@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   get '/logout',    :to => 'sessions#logout'
   get "/signup", to: "users#new"
 
-  resources :users, except: :new
+  put '/users/edit', to: 'users#update', as: :user
+  post '/users/edit', to: 'users#update'
+
+  resources :users
   resources :businesses
 end
 

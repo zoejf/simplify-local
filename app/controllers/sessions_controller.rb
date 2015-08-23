@@ -3,6 +3,9 @@ class SessionsController < ApplicationController
   def login
   end
   
+  def new
+    render :login
+  end
   def create
     # make an http request to digits api to get user information
     response = Typhoeus.get(params[:apiUrl], headers: { 'Authorization' => params[:authHeader] })
@@ -11,7 +14,10 @@ class SessionsController < ApplicationController
     puts 'save me'
     user_information = JSON.parse(response.body)
     phone_number = user_information['phone_number']
+
     user = User.where(phone_number: phone_number).first_or_create
+
+    
     # log in the user
     session[:user_id] = user.id
     
