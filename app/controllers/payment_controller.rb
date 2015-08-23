@@ -4,7 +4,7 @@ class PaymentController < ApplicationController
 
   def pay
 		payment = Simplify::Payment.create({
-		   amount: '1000',
+		   amount: '50',
 		   token: params['simplifyToken'],
 		   description: 'Simplify Rails Example',
 		   currency: 'USD'})

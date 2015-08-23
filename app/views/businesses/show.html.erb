@@ -25,10 +25,22 @@
       <% @business.products.each do |p| %>
       <div class="col-md-4 col-xs-6 product-preview panel">
         <div class="panel-body">
-          <h3><%= p.name %>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-cc-mastercard"></i><br>
+          <h3><%= p.name %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <script type="text/javascript"
+                    src="https://www.simplify.com/commerce/simplify.pay.js"></script>
+            <button data-sc-key="sbpb_Y2NiZjE4YTQtMDQ2My00YTQ0LWFmYjEtZWI4NzY2Zjc1YTFi"
+                    data-name= '<%= p.name %>'
+                    data-description= '<%= p.description %>'
+                    data-reference="99999"
+                    data-amount= '<%= p.price %>'
+                    data-color="#12B830">
+                    <i class="fa fa-cc-mastercard fa-6" style='color:white'></i>
+            </button>
+          <br>
           <small>$<%= p.price %></small></h3>
           <p><img src="<%= p.image %>" class="product-image"></p>
           <p><%= p.description %></p>
+
         </div>
       </div>
       <% end %>
