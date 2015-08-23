@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   post 'payment/pay'
 
 
-  get 'pages/index'
+  root 'pages#index'
 
-  root 'sessions#login'
+  # root 'sessions#login'
 
   get '/login',     :to => 'sessions#login'
   post '/sessions', :to => 'sessions#create'
@@ -47,4 +47,3 @@ end
 #               PATCH  /businesses/:id(.:format)      businesses#update
 #               PUT    /businesses/:id(.:format)      businesses#update
 #               DELETE /businesses/:id(.:format)      businesses#destroy
-
