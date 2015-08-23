@@ -1,17 +1,17 @@
 class SessionsController < ApplicationController
 
   def login
-    user = User.find(session[:user_id])
-    if user
-      redirect_to '/map'
-    else
+    if !current_user
       render :login
+    else
+      redirect_to '/map'
     end
   end
-  
+
   def new
     render :login
   end
+
   def create
     # make an http request to digits api to get user information
     response = Typhoeus.get(params[:apiUrl], headers: { 'Authorization' => params[:authHeader] })
@@ -23,13 +23,13 @@ class SessionsController < ApplicationController
 
     user = User.where(phone_number: phone_number).first_or_create
 
-    
+
     # log in the user
     session[:user_id] = user.id
-    
+
     render json: user
   end
-  
+
   def logout
     session[:user_id]= nil
     redirect_to root_path
