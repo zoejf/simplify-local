@@ -49,14 +49,26 @@
     };
 
 
+    // var biz = function(
+    // 	$.get("/businesses.json", function(bizData){
+    // 		console.log(bizData);
+    // 	}))
+
 
     $.get("/map.json",function(data){
 
     	console.log(data.latitude);
     	var lat = data.latitude;
     	var lng = data.longitude;
+    	console.log(data);
+    	// biz();
+
+
+
+
+
     	// console.log(Business.all);
-     //  data.forEach(function(businesses){
+      // a.forEach(function(businesses){
     	// console.log('user whaaaa');
     	// console.log(businesses)
      //    var lat = parseFloat(businesses.lat);
@@ -66,8 +78,8 @@
      //    var link = 'http://localhost:3000/businesses/{id}'.supplant({id: id})
      //    var phone = businesses.phone;     
         showMarker(lng, lat);
-      // });
-    });
+      });
+    // });
 
  // });
 

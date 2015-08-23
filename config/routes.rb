@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
 
 
-
-  get 'businesses/index'
-
-  get 'businesses/show'
-
   get 'pages/index'
 
   root 'pages#index'
@@ -18,6 +13,8 @@ Rails.application.routes.draw do
 
   put '/users/edit', to: 'users#update', as: :user
   post '/users/edit', to: 'users#update'
+
+  get '/businesses', to: 'businesses#index'
 
   resources :users
   resources :businesses
