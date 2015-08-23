@@ -1,3 +1,21 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// .splash-page {
+//   background-image:url(http://i.imgur.com/skHWX3J.png);
+//   background-size: cover;
+//   height: 100%;
+//   width: 100%;
+// }
+
+.splash-page {
+  background: url(http://i.imgur.com/skHWX3J.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

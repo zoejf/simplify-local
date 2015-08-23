@@ -1,10 +1,23 @@
-<div>
-	<%= form_for :user, url: '/sessions', method: :post do |f| %>
+<div class="container-fluid splash-page">
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3 well text-center">
+      <h1>Simplify Local<br><small>Invest in Your Neighborhood</small></h1>
+      <br>
+      <h4>Log in with your phone number</h4>
+			<div>
+				<%= form_for :user, url: '/sessions', method: :post do |f| %>
 
-	  <label for="phone_number">Phone</label>
-	  <%= f.text_field :phone_number %>
-	  <%= f.submit "Submit", class: "", id: 'loginButton' %>
-	<% end %>
+				  <!-- <label for="phone_number">Phone</label> -->
+				  <i class="fa fa-phone fa-3"></i>&nbsp;&nbsp;&nbsp;<%= f.text_field :phone_number, autofocus:true %>
+				  <%= f.submit "Submit", class: "btn btn-info", id: 'loginButton' %>
+				<% end %>
 
+			</div>
+
+    </div>
+  </div>
 </div>
-
