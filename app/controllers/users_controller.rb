@@ -10,11 +10,19 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+      # current_user = User.find(session[:user_id])
+     @user = User.find(session[:user_id])
+     puts 'fuckin ehh'
+     puts @user
   end
+
+  # def maps
+    
+  # end
 
   # GET /users/new
   def new
-    @user = User.new
+    # @user = User.new
   end
 
   # POST /users

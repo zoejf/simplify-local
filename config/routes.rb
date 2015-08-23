@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post '/sessions', :to => 'sessions#create'
   get '/logout',    :to => 'sessions#logout'
   get "/signup", to: "users#new"
+  get '/map', to: "users#show"
 
   put '/users/edit', to: 'users#update', as: :user
   post '/users/edit', to: 'users#update'
