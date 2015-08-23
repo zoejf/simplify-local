@@ -3,25 +3,33 @@
 <head>
   <title>SimplifyLocal</title>
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-  <!-- font awesome icons -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <%= stylesheet_link_tag 'application', media: 'all' %>
+  
+  <%= javascript_include_tag 'https://www.simplify.com/commerce/v1/simplify.js' %>
+  <%= csrf_meta_tags %>
 
-	<%= csrf_meta_tags %>
-
-  <script id="sdk-js" src="https://cdn.digits.com/1/sdk.js" async></script>
+	<script id="sdk-js" src="https://cdn.digits.com/1/sdk.js" async></script>
+	
 
 </head>
 <body>
+	<div class="container">
 
+	<%= yield %>
 
+	</div>
+	
+	<%= javascript_include_tag :application %> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.simplify.com/commerce/v1/simplify.js"></script>
 
-<%= yield %>
+  
 
-  <%= javascript_include_tag :application %>
 </body>
 </html>

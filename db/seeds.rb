@@ -49,14 +49,14 @@ a = Business.create([
 allProducts = Product.create([
   {
     name: "Pasta Spoon",
-    price: 4.99,
+    price: 499,
     description: "Oneida stainless steel pasta spoon.",
     image: "http://www.contentfaq.com/wp-content/uploads/2015/08/pasta-spoon.png",
     business_id: 1,
   },
   {
     name: "Tea Infuser",
-    price: 8.99,
+    price: 899,
     description: "Whimsical tea infusers make a perfect gift.",
     image: "http://www.contentfaq.com/wp-content/uploads/2015/08/novelty-tea.png",
     business_id: 1,
