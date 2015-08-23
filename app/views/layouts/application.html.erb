@@ -2,16 +2,18 @@
 <html>
 <head>
   <title>SimplifyLocal</title>
-  
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- font awesome icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <%= stylesheet_link_tag 'application', media: 'all' %>
 
-
 	<%= csrf_meta_tags %>
 
-<script id="sdk-js" src="https://cdn.digits.com/1/sdk.js" async></script>
-	
- 
+  <script id="sdk-js" src="https://cdn.digits.com/1/sdk.js" async></script>
 
 </head>
 <body>
@@ -19,7 +21,7 @@
 
 
 <%= yield %>
-	 
+
   <%= javascript_include_tag :application %>
 </body>
 </html>

@@ -1,4 +1,39 @@
-<h1><%= @business.name %></h1>
-   <hr>
-   <p><%= @business.description %></p><br>
-   <p><%= @business.phone %></p>
+<br>
+<br>
+<br>
+
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1><%= @business.name %>&nbsp;&nbsp;<small><%= @business.phone %></small></h1>
+        <h4><%= @business.address %></h4>
+        <hr>
+        <p><%= @business.description %></p><br>
+        <p><i class="fa fa-university">&nbsp;&nbsp;</i><%= @business.merch_assoc %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<div class="row">
+  <hr>
+
+  <div id="all-products" style="display:block">
+
+      <% @business.products.each do |p| %>
+      <div class="col-md-4 col-xs-6 product-preview panel">
+        <div class="panel-body">
+          <h3><%= p.name %>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-cc-mastercard"></i><br>
+          <small>$<%= p.price %></small></h3>
+          <p><img src="<%= p.image %>" class="product-image"></p>
+          <p><%= p.description %></p>
+        </div>
+      </div>
+      <% end %>
+
+    </div>
+
+  </div>
+</div>
