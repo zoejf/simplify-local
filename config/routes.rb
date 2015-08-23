@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'pages/index'
 
-  root 'pages#index'
+  root 'sessions#login'
 
   get '/login',     :to => 'sessions#login'
   post '/sessions', :to => 'sessions#create'

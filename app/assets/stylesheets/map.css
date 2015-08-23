@@ -1,6 +1,8 @@
 .mapbox {
-	height: 100%;
+/*	margin-top:100px;*/
+	height: 90%;
 	width: 100%;
+	z-index: -1;
 }
 
 #map {

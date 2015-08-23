@@ -1,6 +1,12 @@
 class SessionsController < ApplicationController
 
   def login
+    user = User.find(session[:user_id])
+    if user
+      redirect_to '/map'
+    else
+      render :login
+    end
   end
   
   def new
