@@ -8,14 +8,14 @@
 
 
    // Enables string interpolation on string objects ect..
-    // String.prototype.supplant = function (o) {
-    //   return this.replace(/{([^{}]*)}/g,
-    //       function (a, b) {
-    //           var r = o[b];
-    //           return typeof r === 'string' || typeof r === 'number' ? r : a;
-    //       }
-    //     );
-    // };
+    String.prototype.supplant = function (o) {
+      return this.replace(/{([^{}]*)}/g,
+          function (a, b) {
+              var r = o[b];
+              return typeof r === 'string' || typeof r === 'number' ? r : a;
+          }
+        );
+    };
      // render map
     L.mapbox.accessToken = 'pk.eyJ1Ijoiam9zaGxiYWtlcjExIiwiYSI6ImE0ZjEzNjY0OGE5NzM0OWFlZTJiMzhjN2EwMjBjYmNiIn0.-X5q9AKOOsIA-OQPrbOPTw';
                            
@@ -36,7 +36,7 @@
     //set variables
     var geocoder = L.mapbox.geocoder('mapbox.places-v1');
     // function to show markers on map
-    var showMarker = function(lat, lng) {
+    var showMarker = function(lat, lng, link, name, phone) {
       // console.log("link in showMarker: ", link)
       L.mapbox.featureLayer({
         type: 'Feature',
@@ -45,8 +45,7 @@
           coordinates: [lng, lat]
         },
         properties: {
-        	description: "testing 1212",
-        // description: "<a href='" + link + "'>" + name + "</a>" + "<br>" + phone,
+        description: "<a href='" + link + "'>" + name + "</a>" + "<br>" + phone,
           // 'url': 'https://www.google.com',
           'marker-size': 'medium',
           'marker-color': '#0967A9',
@@ -61,10 +60,16 @@
     				// console.log(taco);
     				var bLat = taco.lat;
     				var bLng = taco.lng;
-    				showMarker(bLat,bLng);
+    				var name = taco.name;
+    				var id = taco.id+'';
+    				var link = 'http://localhost:3000/businesses/{id}'.supplant({id: id})
+    				var phone = taco.phone;  
+    				showMarker(bLat,bLng, link, name, phone);
     				// console.log(bLat);
     			})
     		});
+
+
     		
     
 
@@ -89,12 +94,10 @@
     // a.forEach(function(businesses){
   	// console.log('user whaaaa');
   	// console.log(businesses)
-   //    var lat = parseFloat(businesses.lat);
-   //    var lng = parseFloat(businesses.lng);
-   //    var name = businesses.name;
-   //    var id = businesses.id+'';
-   //    var link = 'http://localhost:3000/businesses/{id}'.supplant({id: id})
-   //    var phone = businesses.phone;  
+      // var name = businesses.name;
+      // var id = businesses.id+'';
+      // var link = 'http://localhost:3000/businesses/{id}'.supplant({id: id})
+      // var phone = businesses.phone;  
 
 
 
