@@ -50,6 +50,7 @@ allProducts = Product.create([
   {
     name: "Pasta Spoon",
     price: 499,
+    show_price: 4.99,
     description: "Oneida stainless steel pasta spoon.",
     image: "http://www.contentfaq.com/wp-content/uploads/2015/08/pasta-spoon.png",
     business_id: 1,
@@ -57,6 +58,7 @@ allProducts = Product.create([
   {
     name: "Tea Infuser",
     price: 899,
+    show_price: 8.99,
     description: "Whimsical tea infusers make a perfect gift.",
     image: "http://www.contentfaq.com/wp-content/uploads/2015/08/novelty-tea.png",
     business_id: 1,
