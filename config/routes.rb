@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
 
+  get 'payment/index'
+  post 'payment/index'
+  post 'payment/pay'
+
+
   get 'pages/index'
 
   root 'pages#index'
