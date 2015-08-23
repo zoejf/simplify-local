@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
 
 
+  get 'businesses/index'
+
+  get 'businesses/show'
+
   get 'pages/index'
 
   root 'pages#index'
