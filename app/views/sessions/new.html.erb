@@ -1,12 +1,16 @@
-<h1 class='text-center' id="logInTitle">Log In</h1>
-<%= form_for :user, url: sessions_path do |f| %>
-	<% flash.each do |name, msg| %>
-	      <%= content_tag :div, msg, class: name %>
+	<div class="container">
+	<br>
+	<br>
+	<h1 class='text-center' id="logInTitle">Log In</h1>
+	<%= form_for :user, url: sessions_path do |f| %>
+		<% flash.each do |name, msg| %>
+		      <%= content_tag :div, msg, class: name %>
+		<% end %>
+		
+	  <%= f.email_field :email, placeholder: "Enter Your Email Address", class: 'form-control'  %>
+	  <br>
+	  <%= f.password_field :password, placeholder: "Enter Your Password", class: 'form-control'  %>
+	  <br>
+	  <%= f.submit "Log In", class: 'btn btn-primary center-block'  %>
 	<% end %>
-	
-  <%= f.email_field :email, placeholder: "Enter Your Email Address", class: 'form-control'  %>
-  <br>
-  <%= f.password_field :password, placeholder: "Enter Your Password", class: 'form-control'  %>
-  <br>
-  <%= f.submit "Log In", class: 'btn btn-primary center-block'  %>
-<% end %>
+</div>

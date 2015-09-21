@@ -1,11 +1,14 @@
-
-<h1 class="text-center" id='signUpTitle'>Sign Up</h1>
-<%= form_for @user do |f| %>
-	<%= f.email_field :email, placeholder: "Enter Email Address", class: 'form-control'  %>
-  <br>
-  <%= f.password_field :password, placeholder: "Create a Password", class: 'form-control'  %>
-  <br>
-  <%= f.phone_field :phone, placeholder: "Enter Your Phone Number", class: 'form-control' %>
-  <br>
-  <%= f.submit "Sign Up", class: 'btn btn-primary center-block' %>
-<% end %>
+<div class="container">
+<br>
+<br>
+	<h1 class="text-center" id='signUpTitle'>Sign Up</h1>
+	<%= form_for @user do |f| %>
+		<%= f.email_field :email, placeholder: "Enter Email Address", class: 'form-control'  %>
+	  <br>
+	  <%= f.password_field :password, placeholder: "Create a Password", class: 'form-control'  %>
+	  <br>
+	  <%= f.phone_field :phone, placeholder: "Enter Your Phone Number", class: 'form-control' %>
+	  <br>
+	  <%= f.submit "Sign Up", class: 'btn btn-primary center-block' %>
+	<% end %>
+</div>

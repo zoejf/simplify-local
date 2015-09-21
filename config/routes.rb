@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   # users
   get "/signup", to: "users#new"
-  resources :users, except: [:new]
+  post "/signup", to: "users#create"
+  resources :users, except: [:new, :create]
 
   # sessions
   get '/login',     :to => 'sessions#new'
