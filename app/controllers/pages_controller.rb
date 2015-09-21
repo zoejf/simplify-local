@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
-  def index
+  def show
+    render :show
   end
 end

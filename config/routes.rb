@@ -21,9 +21,13 @@ Rails.application.routes.draw do
   # map
   root 'maps#index'
 
+  #pages
+  get '/about', to: 'pages#show'
+
 end
 
-# signup GET    /signup(.:format)                     users#new
+#  Prefix Verb   URI Pattern                    Controller#Action
+#        signup GET    /signup(.:format)              users#new
 #         users GET    /users(.:format)               users#index
 #               POST   /users(.:format)               users#create
 #     edit_user GET    /users/:id/edit(.:format)      users#edit
@@ -31,9 +35,9 @@ end
 #               PATCH  /users/:id(.:format)           users#update
 #               PUT    /users/:id(.:format)           users#update
 #               DELETE /users/:id(.:format)           users#destroy
-#         login GET    /login(.:format)               sessions#login
+#         login GET    /login(.:format)               sessions#new
 #      sessions POST   /sessions(.:format)            sessions#create
-#        logout GET    /logout(.:format)              sessions#logout
+#        logout GET    /logout(.:format)              sessions#destroy
 # payment_index GET    /payment/index(.:format)       payment#index
 #               POST   /payment/index(.:format)       payment#index
 #   payment_pay POST   /payment/pay(.:format)         payment#pay
@@ -46,3 +50,4 @@ end
 #               PUT    /businesses/:id(.:format)      businesses#update
 #               DELETE /businesses/:id(.:format)      businesses#destroy
 #          root GET    /                              maps#index
+#         about GET    /about(.:format)               pages#show
