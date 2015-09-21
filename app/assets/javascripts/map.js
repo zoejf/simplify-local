@@ -1,9 +1,9 @@
   // $(function(){
 
-    $.get("/map.json",function(data){
-    		var lat = data.latitude;
-    		var lng = data.longitude;
-    		// biz();
+    // $.get("/maps.json",function(data){
+    // 		var lat = 37.7577;
+    // 		var lng = -122.4376;
+    // 		// biz();
     	    // showMarker(lng, lat);
 
 
@@ -21,8 +21,8 @@
                            
     var map = L.mapbox.map('map', 'joshlbaker11.n899ei0m', {
               //user coords
-              center: [lat, lng],
-              zoom: 16,
+              center: [37.7577, -122.4376],
+              zoom: 13,
               minZoom: 2,
               zoomControl: false,
               maxBounds: [[-90, -180], [90, 180]]
@@ -85,7 +85,7 @@
 
 
 
-      });
+      // });
     // });
 
  // });
