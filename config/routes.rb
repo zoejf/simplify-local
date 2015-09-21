@@ -1,37 +1,30 @@
 Rails.application.routes.draw do
 
+  # users
+  get "/signup", to: "users#new"
+  post "/signup", to: "users#create"
+  resources :users, except: [:new, :create]
 
+  # sessions
+  get '/login',     :to => 'sessions#new'
+  post '/sessions', :to => 'sessions#create'
+  get '/logout',    :to => 'sessions#destroy'
+
+  # payment
   get 'payment/index'
   post 'payment/index'
   post 'payment/pay'
 
-
-  root 'pages#index'
-
-  # root 'sessions#login'
-
-  get '/login',     :to => 'sessions#login'
-  post '/sessions', :to => 'sessions#create'
-  get '/logout',    :to => 'sessions#logout'
-  get "/signup", to: "users#new"
-  get '/map', to: "users#show"
-
-  put '/users/edit', to: 'users#update', as: :user
-  post '/users/edit', to: 'users#update'
-
+  # businesses
   get '/businesses', to: 'businesses#index'
+  resources :businesses, except: [:index]
 
-  resources :users
-  resources :businesses
+  # map
+  root 'maps#index'
+
 end
 
-#        Prefix Verb   URI Pattern                    Controller#Action
-#   pages_index GET    /pages/index(.:format)         pages#index
-#          root GET    /                              pages#index
-#         login GET    /login(.:format)               sessions#new
-#      sessions POST   /sessions(.:format)            sessions#create
-#        logout GET    /logout(.:format)              sessions#destroy
-#        signup GET    /signup(.:format)              users#new
+# signup GET    /signup(.:format)                     users#new
 #         users GET    /users(.:format)               users#index
 #               POST   /users(.:format)               users#create
 #     edit_user GET    /users/:id/edit(.:format)      users#edit
@@ -39,6 +32,12 @@ end
 #               PATCH  /users/:id(.:format)           users#update
 #               PUT    /users/:id(.:format)           users#update
 #               DELETE /users/:id(.:format)           users#destroy
+#         login GET    /login(.:format)               sessions#login
+#      sessions POST   /sessions(.:format)            sessions#create
+#        logout GET    /logout(.:format)              sessions#logout
+# payment_index GET    /payment/index(.:format)       payment#index
+#               POST   /payment/index(.:format)       payment#index
+#   payment_pay POST   /payment/pay(.:format)         payment#pay
 #    businesses GET    /businesses(.:format)          businesses#index
 #               POST   /businesses(.:format)          businesses#create
 #  new_business GET    /businesses/new(.:format)      businesses#new
@@ -47,3 +46,4 @@ end
 #               PATCH  /businesses/:id(.:format)      businesses#update
 #               PUT    /businesses/:id(.:format)      businesses#update
 #               DELETE /businesses/:id(.:format)      businesses#destroy
+#          root GET    /                              maps#index
