@@ -1,17 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  full_name: MyString
-  phone: MyString
-  digits_id: MyString
-  digits_access_token: MyString
-  digits_access_secret: MyString
   email: MyString
+  phone: MyString
+  lat: 1.5
+  lng: 1.5
 
 two:
-  full_name: MyString
-  phone: MyString
-  digits_id: MyString
-  digits_access_token: MyString
-  digits_access_secret: MyString
   email: MyString
+  phone: MyString
+  lat: 1.5
+  lng: 1.5
