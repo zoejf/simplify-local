@@ -1,0 +1,2 @@
+module GoodBizHelper
+end

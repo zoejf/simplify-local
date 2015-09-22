@@ -26,13 +26,14 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#show'
 
   resources :biz
+  resources :good_biz
 
 end
 
-#  Prefix Verb   URI Pattern                    Controller#Action
+#        Prefix Verb   URI Pattern                    Controller#Action
 #        signup GET    /signup(.:format)              users#new
+#               POST   /signup(.:format)              users#create
 #         users GET    /users(.:format)               users#index
-#               POST   /users(.:format)               users#create
 #     edit_user GET    /users/:id/edit(.:format)      users#edit
 #          user GET    /users/:id(.:format)           users#show
 #               PATCH  /users/:id(.:format)           users#update
@@ -54,3 +55,11 @@ end
 #               DELETE /businesses/:id(.:format)      businesses#destroy
 #          root GET    /                              maps#index
 #         about GET    /about(.:format)               pages#show
+#     biz_index GET    /biz(.:format)                 biz#index
+#               POST   /biz(.:format)                 biz#create
+#       new_biz GET    /biz/new(.:format)             biz#new
+#      edit_biz GET    /biz/:id/edit(.:format)        biz#edit
+#           biz GET    /biz/:id(.:format)             biz#show
+#               PATCH  /biz/:id(.:format)             biz#update
+#               PUT    /biz/:id(.:format)             biz#update
+#               DELETE /biz/:id(.:format)             biz#destroy
