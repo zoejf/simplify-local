@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   #pages
   get '/about', to: 'pages#show'
 
+  resources :biz
+
 end
 
 #  Prefix Verb   URI Pattern                    Controller#Action
