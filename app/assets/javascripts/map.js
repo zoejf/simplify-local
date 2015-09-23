@@ -91,7 +91,7 @@
                 console.log(data[i]['options'][0]["redemptionLocations"][0]["lat"]);
                 var bLat = data[i]['options'][0]["redemptionLocations"][0]["lat"];
                 var bLng = data[i]['options'][0]["redemptionLocations"][0]["lng"];
-                var name = data[i]["tags"][0]["name"];
+                var name = data[i]["merchant"]["name"];
                 
                 var link = data[i]["merchant"]["websiteUrl"];
                 var phone = data[i]["options"][0]["redemptionLocations"][0]["phoneNumber"];
