@@ -29,8 +29,10 @@ Rails.application.routes.draw do
   # groupon api
   get '/results', to: 'biz#index'
   resources :biz
+  resources :good_biz
 
 end
+
 #        signup GET    /signup(.:format)              users#new
 #               POST   /signup(.:format)              users#create
 #         users GET    /users(.:format)               users#index
