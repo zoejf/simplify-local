@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   # businesses
   get '/businesses', to: 'businesses#index'
   resources :businesses, except: [:index]
+  resources :biz
 
   # map
   root 'maps#index'
@@ -25,12 +26,13 @@ Rails.application.routes.draw do
   #pages
   get '/about', to: 'pages#show'
 
+  # groupon api
+  get '/results', to: 'biz#index'
   resources :biz
   resources :good_biz
 
 end
 
-#        Prefix Verb   URI Pattern                    Controller#Action
 #        signup GET    /signup(.:format)              users#new
 #               POST   /signup(.:format)              users#create
 #         users GET    /users(.:format)               users#index
