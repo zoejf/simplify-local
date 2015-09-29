@@ -6,3 +6,22 @@
 #map {
 	position: fixed;
 }
+
+#biz {
+	 	margin: auto;
+    width: 78%;
+    border:3px solid #8AC007;
+    padding: 10px;
+}
+
+#bizName {
+	 	text-align: center;
+    width: 75%;
+    font-size: 14px;
+}
+
+/*#bizImage {
+	margin: auto;
+    width: 75%;
+
+}*/

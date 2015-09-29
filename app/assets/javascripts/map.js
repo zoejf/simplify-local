@@ -29,7 +29,7 @@
 
     var geocoder = L.mapbox.geocoder('mapbox.places-v1');
 
-    var showMarker = function(lat, lng, link, name, phone) {
+    var showMarker = function(lat, lng, link, name, previewImage, phone, productTitle, productPrice) {
       L.mapbox.featureLayer({
         type: 'Feature',
         geometry: {
@@ -37,7 +37,8 @@
           coordinates: [lng, lat]
         },
         properties: {
-        description: "<a href='" + link + "'>" + name + "</a>" + "<br>" + phone,
+        description:  "<div id='biz'><a href='" + link + "' id='bizName'>" + name + "</a>" + "<br><strong> Featured Product Price: " + productPrice + "</strong>" + "<br>" + "<img src='" + previewImage + "' id='bizImage'>" + "<br>" + productTitle +"</div>",
+        // description: "<a href='" + link + "'>" + name + "</a>" + "<br>" + phone,
           'marker-size': 'medium',
           'marker-color': '#0967A9',
           'marker-symbol': 'circle-stroked'
@@ -45,57 +46,28 @@
       }).addTo(map);
     };
 
-    	$.get("/businesses.json", function(bizData) {
-    			bizData.forEach(function(taco){
-    				// console.log(taco);
-    				var bLat = taco.lat;
-    				var bLng = taco.lng;
-    				var name = taco.name;
-    				var id = taco.id+'';
-    				var link = 'http://localhost:3000/businesses/{id}'.supplant({id: id})
-    				var phone = taco.phone;  
-    				showMarker(bLat,bLng, link, name, phone);
-    				// console.log(bLat);
-    			})
-    		});
-
-      // $.get('https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&filters=category:food-and-drink&offset=0&limit=50&callback=JSON_CALLBACK', function(biz2Data) {
-      //     biz2Data.forEach(function(biz){
-      //       // console.log(taco);
-      //       // var bLat = taco.lat;
-      //       // var bLng = taco.lng;
-      //       var data = jsonp.biz
-      //       console.log(data)
-
       $.ajax({
             url: 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&filters=category:food-and-drink&offset=0&limit=50',
             dataType: 'jsonp',
             success: function(biz2Data) {
-               
-            // console.log(taco);
-            // var bLat = taco.lat;
-            // var bLng = taco.lng;
-
             var data = biz2Data.deals;
-            // var bLat = biz2Data["options"][0]["redemptionLocations"][0]["lat"];
-            // var bLng = biz2Data["options"][0]["redemptionLocations"][0]["lng"];
-            // var name = biz2Data["tags"][0]["name"];
-            
-            // var link = biz2Data["merchant"]["websiteUrl"];
-            // var phone = biz2Data["options"][0]["redemptionLocations"][0]["phoneNumber"];
-            // showMarker(bLat,bLng, link, name, phone);
-            // console.log(data.deals["options"][]["redemptionLocations"][0]["lat"]);
              for (i = 0; i < data.length; i++) {
                 // console.log(data["options"][i]["redemptionLocations"][i]["lat"]);
                 
-                console.log(data[i]['options'][0]["redemptionLocations"][0]["lat"]);
+                
                 var bLat = data[i]['options'][0]["redemptionLocations"][0]["lat"];
                 var bLng = data[i]['options'][0]["redemptionLocations"][0]["lng"];
-                var name = data[i]["merchant"]["name"];
                 
-                var link = data[i]["merchant"]["websiteUrl"];
+                var name = data[i]["merchant"]["name"];
+                var link = data[i]["dealUrl"];
                 var phone = data[i]["options"][0]["redemptionLocations"][0]["phoneNumber"];
-                showMarker(bLat,bLng, link, name, phone);
+                var previewImage = data[i]["mediumImageUrl"];
+                var productTitle = data[i]["title"];
+                var productPrice = data[i]["options"][0]["price"]["formattedAmount"];
+                console.log(productTitle);
+                console.log(productPrice);
+
+                showMarker(bLat,bLng, link, name, previewImage, phone, productTitle, productPrice);
              };
             }
           });
