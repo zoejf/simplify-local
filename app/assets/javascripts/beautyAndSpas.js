@@ -9,7 +9,7 @@
         properties: {
         description:  "<div id='biz'><a href='" + link + "' id='bizName'>" + name + "</a>" + "<br><strong> Featured Product Price: " + productPrice + "</strong>" + "<br>" + "<img src='" + previewImage + "' id='bizImage'>" + "<br>" + productTitle +"</div>",
           'marker-size': 'medium',
-          'marker-color': '#FF3399',
+          'marker-color': '#FFFF00',
           'marker-symbol': 'circle-stroked'
         }
       }).addTo(map);

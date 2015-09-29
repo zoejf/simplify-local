@@ -9,7 +9,7 @@ var showHealthFitness = function(lat, lng, link, name, previewImage, phone, prod
         properties: {
         description:  "<div id='biz'><a href='" + link + "' id='bizName'>" + name + "</a>" + "<br><strong> Featured Product Price: " + productPrice + "</strong>" + "<br>" + "<img src='" + previewImage + "' id='bizImage'>" + "<br>" + productTitle +"</div>",
           'marker-size': 'medium',
-          'marker-color': '#5ba0ee',
+          'marker-color': '#193E89',
           'marker-symbol': 'circle-stroked'
         }
       }).addTo(map);
