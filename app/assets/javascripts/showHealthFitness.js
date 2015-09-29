@@ -13,7 +13,6 @@ var showHealthFitness = function(lat, lng, link, name, previewImage, phone, prod
           'marker-symbol': 'circle-stroked'
         }
       }).addTo(map);
-      console.log(link)
     };
 
     $.ajax({

@@ -13,7 +13,6 @@
           'marker-symbol': 'circle-stroked'
         }
       }).addTo(map);
-      console.log(link)
     };
 
       $.ajax({
