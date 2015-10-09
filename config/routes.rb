@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   # users
   get "/signup", to: "users#new"
-  post "/signup", to: "users#create"
+  post "/users", to: "users#create"
   resources :users, except: [:new, :create]
 
   # sessions

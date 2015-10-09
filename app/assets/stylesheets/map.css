@@ -5,6 +5,7 @@
 
 #map {
 	position: fixed;
+	z-index: -1;
 }
 
 #biz {
@@ -18,5 +19,15 @@
 	 	text-align: center;
     width: 75%;
     font-size: 14px;
+}
+
+button#refresh {
+	z-index:1;
+	float: right;
+	background-color: #ced3d4;
+	margin: 10px;
+	box-shadow: 2px 2px;
+	font-color: #001F5C;
+	font-size: 18px;	
 }
 
