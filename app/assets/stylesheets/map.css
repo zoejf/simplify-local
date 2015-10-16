@@ -20,3 +20,21 @@
     font-size: 14px;
 }
 
+
+
+#banner{
+  text-align: center;
+  font-size: 26px;
+  font-weight: 10px;
+  font-style: italic;
+  padding-bottom: 5px;
+  padding-top:15px;
+  background-color: #ced3d4;
+  height:60px;
+}
+
+#refresh-map{
+	text-align: right;
+	/*margin: auto;*/
+	/*margin-bottom: -100px;*/
+}
