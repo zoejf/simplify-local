@@ -302,13 +302,3 @@ html { height: 100%;}
     z-index: 1;
 }
 
-#banner{
-  text-align: center;
-  font-size: 26px;
-  font-weight: 10px;
-  font-style: italic;
-  padding-bottom: 5px;
-  padding-top:15px;
-  background-color: #ced3d4;
-  height:60px;
-}
