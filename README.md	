@@ -1,10 +1,11 @@
-## Simplify Local
+##Simplify Local
 
 Simplify Local is a way for people to find and support locally owned businesses near them. This is a demo application that earned a Top 6 Finalist spot at the <a href="http://mastersofcode.com/" target="_blank">Mastercard Master’s of Code Global Hackathon</a> in San Francisco (August 2015).
 
-# <img src="/app/assets/images/SimplifyLocalScreenshot.png" height="200">
 
-#### Technologies Used
+<img src="/app/assets/images/SimplifyLocalScreenshot.png" height="200">
+
+####Technologies Used
 - Ruby on Rails
 - AJAX
 - jQuery
@@ -14,7 +15,7 @@ Simplify Local is a way for people to find and support locally owned businesses 
 - Mastercard Simplify Commerce API (payment processing)
 - Groupon API
 
-#### Development Team
+####Development Team
 - <a href="https://github.com/joshlbaker" target="_blank">Josh Baker</a>
 - <a href="https://github.com/zoejf" target="_blank">Zoe Foss</a>
 - <a href="https://github.com/bgamwell" target="_blank">Brennan Gamwell</a>
