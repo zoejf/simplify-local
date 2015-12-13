@@ -25,3 +25,7 @@
   background-color: transparent;
   color: white;
 }
+.nav .btn.btn-primary {
+  margin-top: 10px;
+  margin-right: 10px;
+}
