@@ -1,0 +1,20 @@
+
+<h1>Daily Deals!</h1>
+
+
+<% @response["deals"].each do |i| %>
+<hr>
+<h3><%= i["merchant"]["name"] %></h3>
+<p><%= i["tags"][0]["name"] %></p>
+<p><%= link_to "Website", i["merchant"]["websiteUrl"] %></p>
+<p><%= i["options"][0]["redemptionLocations"][0]["streetAddress1"] %></p>
+<p><%= i["options"][0]["redemptionLocations"][0]["state"] %></p>
+<p><%= i["options"][0]["redemptionLocations"][0]["city"] %></p>
+<p><%= i["options"][0]["redemptionLocations"][0]["phoneNumber"] %></p>
+<h4>FEATURED PRODUCT:</h4>
+<p><%= i["title"] %></p>
+<div>Price: <%= i["options"][0]["price"]["formattedAmount"] %>
+<img src="<%= i["largeImageUrl"] %>"/>
+</div>
+
+<% end %>

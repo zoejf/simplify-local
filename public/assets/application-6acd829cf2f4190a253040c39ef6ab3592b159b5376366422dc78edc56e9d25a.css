@@ -1,0 +1,74 @@
+/* line 5, /Users/gregonza1/Dev/simplify-local/app/assets/stylesheets/businesses.scss */
+.product-image {
+  height: 150px;
+  width: 150px;
+}
+
+/* line 10, /Users/gregonza1/Dev/simplify-local/app/assets/stylesheets/businesses.scss */
+.product-preview button {
+  padding: 5px;
+  background-color: transparent;
+  border-color: transparent;
+}
+.mapbox {
+	height: 100%;
+	width: 100%;
+}
+
+#map {
+	position: fixed;
+}
+.navbar {
+  margin-bottom: 0;
+  background-color: rgba(208,208,208,0.5);
+}
+.dropdown {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px;
+}
+.categories {
+  float: right;
+  margin-top: 70px;
+/*  margin-right: 30px;*/
+}
+.navbar-inner {
+  background:transparent;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+  background-color: transparent;
+  color: white;
+}
+.nav a, .nav a:focus, .nav a:hover {
+  background-color: transparent;
+  color: black;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: transparent;
+  color: white;
+}
+/* line 12, /Users/gregonza1/Dev/simplify-local/app/assets/stylesheets/pages.scss */
+.splash-page {
+  background: url(http://i.imgur.com/skHWX3J.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

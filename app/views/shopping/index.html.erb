@@ -1,0 +1,16 @@
+<h1>Shopping</h1>
+
+
+<% @response["deals"].each do |i| %>
+<hr>
+<h3><%= i["merchant"]["name"] %></h3>
+<p><%= i["tags"][0]["name"] %></p>
+<p><%= link_to "Website", i["merchant"]["websiteUrl"] %></p>
+
+<h4>FEATURED PRODUCT:</h4>
+<p><%= i["title"] %></p>
+<div>Price: <%= i["options"][0]["price"]["formattedAmount"] %>
+<img src="<%= i["largeImageUrl"] %>"/>
+</div>
+
+<% end %>
